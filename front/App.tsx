@@ -10,22 +10,38 @@ import {
 
 function App(): JSX.Element {
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.inputContainer}>
+        <TextInput style={styles.input} />
         <Text>텍스트</Text>
-        <Button title="버튼" onPress={() => console.log('버튼 클릭')} />
-        <TextInput />
+      </View>
+      <View style={styles.inputContainer}>
+        <TextInput style={styles.input} />
+        <Text>텍스트</Text>
       </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  //* flex: 1을 요소마다 주었는데, 1:1, 1:2, 2:3 이런식으로 스타일을 지정할 때 유용함
   container: {
+    flex: 1,
+    backgroundColor: 'yellow',
+  },
+  input: {
+    flex: 1,
+    borderWidth: 2,
+    borderColor: 'black',
+    height: 100,
+    width: 100,
+  },
+  inputContainer: {
+    flex: 1,
     backgroundColor: 'red',
-    // margin: 10,
-    marginVertical: 10, // 상하
-    marginHorizontal: 20, // 좌우
+    flexDirection: 'row', // flexDirection: 'column'이 기본값
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
