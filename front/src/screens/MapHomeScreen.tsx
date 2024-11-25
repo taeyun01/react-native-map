@@ -1,14 +1,13 @@
 import {Text, View} from 'react-native';
 import React from 'react';
 
-const LoginScreen = () => {
+const MapHomeScreen = () => {
   return (
     <View>
-      <Text>로그인 화면ddd뭐야</Text>
+      <Text>MapHomeScreen</Text>
     </View>
   );
 };
-
 // const styles = StyleSheet.create({});
 
-export default LoginScreen;
+export default MapHomeScreen;
